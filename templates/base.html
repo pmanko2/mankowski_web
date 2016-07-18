@@ -9,24 +9,27 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Starter Template for Bootstrap</title>
+    <title>Pawel Mankowski's Homepage!</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{% static 'css/bootstrap/bootstrap.min.css' %}" rel="stylesheet" media="screen">
-
-    <!-- Custom styles for this template -->
-    <link href="{% static 'css/bootstrap/starter-template.css' %}" rel="stylesheet">
-
+    <link href="{% static 'css/bootstrap/material-kit.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap/one-page-wonder.css' %}" rel="stylesheet">
+    {% block base_css %}
+    {% endblock %}
   </head>
 
-  <body>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     {% block content %}
     {% endblock %}
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="{% static 'js/bootstrap/jquery.min.js' %}"></script>
     <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap/material.min.js' %}"></script>
+    {% block base_js %}
+    {% endblock %}
   </body>
 </html>

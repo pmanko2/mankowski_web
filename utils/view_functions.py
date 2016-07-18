@@ -1,5 +1,8 @@
+import logging
 from django.template import RequestContext
 from django.shortcuts import render_to_response
+
+logger = logging.getLogger("mankowski_web.utils")
 
 
 def render_to(template):

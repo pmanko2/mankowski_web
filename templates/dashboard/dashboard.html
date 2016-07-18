@@ -1,13 +1,45 @@
 {% extends "base.html" %}
+{% load staticfiles %}
+
+{% block base_css %}
+<link href="{% static 'css/custom/dashboard.css' %}" rel="stylesheet">
+{% endblock %}
 
 {% block content %}
 {% include 'navbar.html' %}
-<div class="container">
-
-  <div class="starter-template">
-    <h1>Bootstrap starter template</h1>
-    <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-  </div>
-
+<!-- Page Header -->
+<!-- Set your background image for this header on the line below. -->
+<div class="wrapper">
+    <div class="header header-filter" style="background-image: url('{% static 'img/sands.jpg' %}');"></div>
+    <div class="main main-raised-no-margin">
+        <div class="profile-content">
+            <div class="container">
+                <div class="row">
+                    <div class="profile">
+                        <img height="160" width="160" src="{% static 'img/profile.jpg' %}" alt="Circle Image" class="img-circle center-block img-responsive img-raised">
+                        <div class="name">
+                            <h1 class="title">Pawel Mankowski</h1>
+                            <h3>Software Engineer - Dog Cuddler - Pun Enthusiast</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main main-raised-no-margin" style="background-color: #6FA2CA">
+        <div class="container">
+            <div class="row">
+                <div>
+                    <div>
+                        <h2 class="title">About Me</h2>
+                        <h5>Witam! I'm Pawel Mankowski, a Software Engineer living and working in Boston, MA. Originally from Poland, I grew up in New Jersey and graduated with a B.Sc in Software Engineering from McGill University in 2014. When not annoying loved ones/friends/coworkers with my all too frequent (but hilarious, I swear!) puns,
+                            I work on improving infrastructure and quality of the search product at <a href="https://maps.here.com"><img src="{% static 'img/HERE-logo.png' %}"></a>. </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
 {% endblock %}
+

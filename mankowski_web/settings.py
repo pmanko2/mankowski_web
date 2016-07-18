@@ -42,7 +42,6 @@ PREREQ_APPS = [
 ]
 
 PROJECT_APPS = [
-
 ]
 
 INSTALLED_APPS = PREREQ_APPS + PROJECT_APPS
@@ -76,6 +75,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'mankowski_web.wsgi.application'
 
@@ -165,6 +165,11 @@ LOGGING = {
             'propagate': False
         },
         'mankowski_web.chell': {
+            'handlers': ['console', 'log_file'],
+            'level': 'DEBUG',
+            'propagate': False
+        },
+        'mankowski_web.utils': {
             'handlers': ['console', 'log_file'],
             'level': 'DEBUG',
             'propagate': False
